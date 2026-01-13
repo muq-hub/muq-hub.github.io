@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  background-color: #FFD1DC;
+  box-shadow: inset black;
+  font-family: 'Instagram Sans', monospace;
+  color: #000000;
+}
+
+#game-container {
+  width: 960px;
+  height: 540px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#proceed-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.proceed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Instagram Sans Medium';
+    width: 150px;
+    height: 60px;
+    background-color: #e7b3ff;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    cursor: progress;
+    transition: all 0.2s ease-out;
+}
+
+.proceed:hover {
+  box-shadow: 0 0.5px 8px #1e1d1f;
+  transform: scale(1.03) translateY(-2px);
+  background-color: #5e11ab;
+  color: white;  
+}
+
+#owa-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.owa-header {
+  font-size: 60px;
+  font-family: 'Instagram Sans Headline';
+  color: #000000;
+}
+
+.owa-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url("default.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+#scene-container {
+  min-height: 220px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.notification-card {
+  display: flex;
+  gap: 16px;
+  background-color: #ffe6f2;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(120, 50, 120, 0.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.animate-user {
+  animation: slideIn 1.5s ease-out;
+}
+
+.animate-platform {
+  animation: popIn 0.3s ease-in-out;
+}
+
+.notification-card:hover {
+  transform: scale(1.02) translateY(-3px);
+}
+
+.profile-pic {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #d9a7eb;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#choice-container {
+  display: flex;
+  gap: 16px;
+}
+
+.choice-btn {
+  flex: 1;
+  padding: 12px;
+  background-color: #e7b3ff;
+  border: none;
+  border-radius: 12px;
+  color: #3b1e3f;
+  font-weight: bold;
+  cursor: grab;
+  transition: all 0.2s ease-in-out;
+}
+
+.choice-btn:hover {
+  background-color: #3c0c6c;
+  color: white;
+  transition: 0.2s ease-in;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
